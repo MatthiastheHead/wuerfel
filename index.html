@@ -10,19 +10,16 @@
             text-align: center;
             margin-top: 50px;
         }
-        h1 {
-            margin-bottom: 20px;
-        }
         .dice-container {
             position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 40px auto;
-            perspective: 800px;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            perspective: 600px;
         }
         .dice {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             position: absolute;
             transform-style: preserve-3d;
             transform: rotateX(0deg) rotateY(0deg);
@@ -30,22 +27,22 @@
         }
         .dice div {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             background: #fff;
             border: 2px solid #000;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: bold;
         }
-        .side-1 { transform: rotateY(0deg) translateZ(75px); }
-        .side-2 { transform: rotateY(90deg) translateZ(75px); }
-        .side-3 { transform: rotateY(180deg) translateZ(75px); }
-        .side-4 { transform: rotateY(-90deg) translateZ(75px); }
-        .side-5 { transform: rotateX(90deg) translateZ(75px); }
-        .side-6 { transform: rotateX(-90deg) translateZ(75px); }
+        .side-1 { transform: rotateY(0deg) translateZ(50px); }
+        .side-2 { transform: rotateY(90deg) translateZ(50px); }
+        .side-3 { transform: rotateY(180deg) translateZ(50px); }
+        .side-4 { transform: rotateY(-90deg) translateZ(50px); }
+        .side-5 { transform: rotateX(90deg) translateZ(50px); }
+        .side-6 { transform: rotateX(-90deg) translateZ(50px); }
 
         @keyframes roll {
             0% { transform: rotateX(0deg) rotateY(0deg); }
@@ -53,13 +50,13 @@
         }
         button {
             padding: 10px 20px;
-            font-size: 18px;
-            margin: 20px;
+            font-size: 16px;
+            margin: 10px;
             cursor: pointer;
         }
         .result {
-            margin-top: 30px;
-            font-size: 20px;
+            margin-top: 20px;
+            font-size: 18px;
             font-weight: bold;
         }
     </style>
@@ -103,7 +100,7 @@
                 }
 
                 // Display result
-                document.getElementById("result").innerText = `Der Würfel zeigt: ${result}`;
+                
             }, 1000);
         }
     </script>
